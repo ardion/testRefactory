@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#494545"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/et"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:paddingLeft="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/ic_rectangle_3132"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@id/tv"
+             />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="100dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
+            android:text="Output:"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tv1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="undo/redo"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv"
+            app:layout_constraintStart_toEndOf="@id/btnreverese" />
+
+        <Button
+            android:id="@+id/btnreverese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reverse"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
